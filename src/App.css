@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Variables globales */
+:root {
+  --primary-color: #007bff; /* Bleu professionnel */
+  --secondary-color: #6c757d; /* Gris neutre */
+  --accent-color: #28a745; /* Vert subtil */
+  --accent-red: #dc3545; /* Rouge pour les alertes/erreurs, mais moins utilisé */
+  --text-color: #343a40; /* Texte anthracite pour un contraste doux */
+  --light-bg: #f8f9fa; /* Fond très clair */
+  --dark-bg: #212529; /* Fond presque noir pour les éléments sombres */
+  --transition: all 0.3s ease-in-out; /* Transition plus courte et nette */
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* Ombre de carte légère */
+  --card-hover-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Ombre de carte au survol légèrement plus prononcée */
+  --border-radius: 8px; /* Rayon de bordure général pour les éléments */
+}
+
+/* Styles généraux */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6; /* Interligne standard */
+  background-color: var(--light-bg);
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  color: var(--dark-bg); /* Titres en noir profond pour le contraste */
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.05rem; /* Taille de paragraphe légèrement ajustée */
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 1140px; /* Largeur maximale du conteneur légèrement réduite pour plus d'air */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.py-5 {
+  padding-top: 4rem !important; /* Espacement vertical ajusté */
+  padding-bottom: 4rem !important;
+}
+
+/* Animation de fond */
+.event-pattern {
+  display: none; /* Supprimer l'animation de fond pour un look plus épuré */
+}
+
+/* Styles pour la section héro */
+.hero-section {
+  height: 90vh; /* Hauteur ajustée pour un look moins imposant */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: none; /* Supprimer l'ombre de la section hero */
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 123, 255, 0.2); /* Un voile de couleur primaire transparent */
+  opacity: 1; /* Pleine opacité pour le voile */
+  animation: none; /* Supprimer l'animation du dégradé */
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+  text-align: center; /* Centrer le texte */
+}
+
+.hero-section h1 {
+  font-size: 3.8rem; /* Taille de titre principale ajustée */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  animation: none; /* Supprimer l'animation fadeInUp */
+  text-shadow: none; /* Supprimer l'ombre sur le texte */
+  color: white; /* Assurer que le titre est blanc */
+}
+
+.hero-section p {
+  font-size: 1.5rem; /* Taille de sous-titre ajustée */
+  animation: none; /* Supprimer l'animation fadeInUp */
+  animation-fill-mode: none;
+  text-shadow: none; /* Supprimer l'ombre sur le texte */
+  color: rgba(255, 255, 255, 0.9); /* Texte légèrement transparent */
+}
+
+/* Styles pour la barre de navigation */
+.navbar {
+  background: white !important; /* Fond blanc uni */
+  backdrop-filter: blur(0); /* Supprimer le flou */
+  transition: var(--transition);
+  padding: 0.8rem 0; /* Padding ajusté */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Bordure très légère */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /* Ombre très subtile */
+}
+
+.navbar.scrolled {
+  padding: 0.6rem 0; /* Padding ajusté */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); /* Ombre au défilement */
+}
+
+.navbar-brand {
+  font-size: 1.8rem; /* Taille de marque ajustée */
+  font-weight: 700;
+  color: var(--dark-bg) !important; /* Couleur de la marque en noir profond */
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 40px; /* Taille du logo ajustée */
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: var(--text-color) !important; /* Couleur des liens de navigation */
+  font-weight: 500; /* Poids de police ajusté */
+  padding: 0.6rem 1rem !important; /* Padding ajusté */
+  transition: var(--transition);
+  position: relative;
+  border-radius: var(--border-radius); /* Utiliser la variable de rayon de bordure */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Alignement du soulignement */
+  left: 50%;
+  width: 0;
+  height: 2px; /* Épaisseur du soulignement */
+  background: var(--primary-color); /* Couleur du soulignement */
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Soulignement complet au survol */
+}
+
+.nav-link:hover {
+  background-color: rgba(0, 123, 255, 0.05); /* Effet de survol très léger */
+}
+
+/* Styles pour les cartes de services */
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.08); /* Bordure légère */
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: var(--card-shadow);
+  background: white;
+  position: relative;
+  z-index: 0;
+}
+
+.card:hover {
+  transform: translateY(-8px); /* Léger déplacement */
+  box-shadow: var(--card-hover-shadow);
+}
+
+.service-image {
+  height: 200px; /* Hauteur d'image ajustée */
+  overflow: hidden;
+  position: relative;
+}
+
+.service-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 123, 255, 0.2), rgba(0, 123, 255, 0.5)); /* Dégradé plus doux avec la couleur primaire */
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.card:hover .service-image::after {
+  opacity: 1;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.card:hover .service-image img {
+  transform: scale(1.05); /* Zoom plus subtil */
+}
+
+.card-body {
+  padding: 1.5rem; /* Padding ajusté */
+}
+
+.card-title {
+  font-size: 1.5rem; /* Taille de titre ajustée */
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--dark-bg);
+}
+
+.card-text {
+  font-size: 0.95rem; /* Taille de texte de carte ajustée */
+  color: var(--secondary-color);
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  border: none;
+  padding: 0.8rem 1.8rem; /* Padding ajusté */
+  border-radius: var(--border-radius); /* Utiliser la variable de rayon de bordure */
+  font-weight: 600;
+  transition: var(--transition);
+  text-transform: none; /* Ne pas mettre en majuscules */
+  letter-spacing: normal; /* Espacement normal */
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Ombre pour le bouton */
+}
+
+.btn-primary:hover {
+  background: var(--dark-bg); /* Changement de couleur au survol */
+  transform: translateY(-2px); /* Léger déplacement */
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Styles pour la section contact */
+.contact-content {
+  background: white;
+  padding: 3rem; /* Padding ajusté */
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.08); /* Bordure subtile */
+}
+
+/* Styles pour le footer */
+.footer {
+  background: var(--dark-bg);
+  color: white;
+  padding: 3.5rem 0 2rem; /* Padding ajusté */
+  border-top: none; /* Supprimer la bordure rouge */
+}
+
+.footer h5 {
+  font-weight: 600;
+  margin-bottom: 1.5rem; /* Marge ajustée */
+  color: white; /* Titres de footer en blanc */
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.7); /* Couleur de lien plus douce */
+  text-decoration: none;
+  transition: var(--transition);
+  display: block;
+  padding: 0.2rem 0;
+}
+
+.footer a:hover {
+  color: var(--primary-color); /* Couleur primaire au survol */
+  transform: translateX(0); /* Supprimer le déplacement */
+}
+
+/* Styles pour la sidebar */
+.sidebar {
+  background: white; /* Fond blanc pour la sidebar */
+  width: 280px; /* Largeur de la sidebar ajustée */
+  position: fixed;
+  top: 0;
+  left: -280px;
+  height: 100vh;
+  z-index: 1000;
+  transition: var(--transition);
+  padding: 2rem; /* Padding ajusté */
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
+  border-right: 1px solid rgba(0, 0, 0, 0.05); /* Bordure subtile */
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem; /* Marge ajustée */
+}
+
+.sidebar-header img {
+  height: 45px; /* Taille du logo ajustée */
+}
+
+.close-sidebar {
+  background: none;
+  border: none;
+  color: var(--text-color); /* Couleur du bouton de fermeture */
+  font-size: 1.8rem; /* Taille du bouton ajustée */
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.close-sidebar:hover {
+  color: var(--primary-color); /* Couleur primaire au survol */
+  transform: rotate(0deg); /* Supprimer l'animation de rotation */
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 0.8rem; /* Marge ajustée */
+}
+
+.sidebar-menu a {
+  color: var(--text-color); /* Couleur des liens de la sidebar */
+  text-decoration: none;
+  font-size: 1.1rem; /* Taille de police ajustée */
+  font-weight: 500;
+  transition: var(--transition);
+  display: block;
+  padding: 0.5rem 0;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-menu a:hover {
+  color: var(--primary-color);
+  padding-left: 10px; /* Déplacement plus subtil */
+  border-left-color: var(--primary-color);
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Opacité de l'overlay ajustée */
+  z-index: 999;
+  display: none;
+}
+
+.sidebar-overlay.active {
+  display: block;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Déplacement plus subtil */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .hero-section h1 {
+    font-size: 3.2rem; /* Ajustement pour mobile */
+  }
+  
+  .hero-section p {
+    font-size: 1.4rem; /* Ajustement pour mobile */
+  }
+
+  .navbar-brand img {
+    height: 38px; /* Ajustement pour mobile */
+  }
+
+  .sidebar {
+    width: 260px; /* Ajustement pour mobile */
+    left: -260px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+  
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-content {
+    padding: 2rem;
+  }
+
+  .navbar-brand img {
+    height: 32px;
+  }
+
+  .sidebar-header img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+
+  .py-5 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .navbar-brand img {
+    height: 28px;
+  }
+
+  .sidebar-header img {
+    height: 35px;
+  }
+}
+
+/* Animations pour les sections */
+section {
+  opacity: 0;
+  transform: translateY(30px); /* Déplacement initial plus subtil */
+  transition: var(--transition);
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
