@@ -2,6 +2,7 @@
   "name": "page_pub",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Yoan06.github.io/X10",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "@testing-library/dom": "^10.4.0",
@@ -25,11 +26,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+},
+
   "eslintConfig": {
     "extends": [
       "react-app",
