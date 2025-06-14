@@ -1,85 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Restauration: React.FC = () => {
-  const services = [
-    {
-      title: "Traiteurs Professionnels",
-      description: "Service de restauration haut de gamme pour vos événements",
-      features: [
-        "Cuisine sur place",
-        "Service personnalisé",
-        "Options végétariennes",
-        "Allergies prises en compte"
-      ]
-    },
-    {
-      title: "Buffets sur Mesure",
-      description: "Buffets adaptés à vos besoins et à votre budget",
-      features: [
-        "Menu personnalisé",
-        "Service à la française",
-        "Décoration de table",
-        "Service de vaisselle"
-      ]
-    },
-    {
-      title: "Service de Bar",
-      description: "Bar professionnel pour vos événements",
-      features: [
-        "Barmans expérimentés",
-        "Cocktails signature",
-        "Sélection de vins",
-        "Service de boissons"
-      ]
-    },
-    {
-      title: "Options Spéciales",
-      description: "Solutions adaptées à tous les besoins",
-      features: [
-        "Cuisine internationale",
-        "Régimes spéciaux",
-        "Service traiteur",
-        "Événements thématiques"
-      ]
-    }
-  ];
-
-  const menus = [
-    {
-      title: "Menu Business",
-      description: "Idéal pour les réunions et séminaires",
-      price: "À partir de 25€/personne",
-      items: [
-        "Cocktail d'accueil",
-        "Buffet froid",
-        "Desserts",
-        "Café et mignardises"
-      ]
-    },
-    {
-      title: "Menu Premium",
-      description: "Pour les événements importants",
-      price: "À partir de 45€/personne",
-      items: [
-        "Cocktails signature",
-        "Service à la française",
-        "Sélection de vins",
-        "Desserts raffinés"
-      ]
-    },
-    {
-      title: "Menu Événementiel",
-      description: "Pour les grands événements",
-      price: "Sur devis",
-      items: [
-        "Service complet",
-        "Animation culinaire",
-        "Décoration",
-        "Service de bar"
-      ]
-    }
-  ];
-
   return (
     <div className="service-page restauration-page py-5">
       <div className="container">
@@ -146,9 +68,9 @@ const Restauration: React.FC = () => {
                 </p>
 
                 <div className="text-center mt-5">
-                  <a href="/contact" className="btn btn-primary btn-lg">
+                  <Link to="/contact" className="btn btn-primary btn-lg">
                     Demander un devis personnalisé
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

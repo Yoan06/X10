@@ -1,0 +1,88 @@
+classDiagram
+    class Commande {
+        -num_cmd: String
+        -id_yz: String
+        -date_cmd: Date
+        -total_cmd: Float
+        -adresse: String
+        -motif_annulation: String
+        -etat_paiement: String
+        -is_upsell: Boolean
+        -client_id: String
+        -ville_id: String
+    }
+
+    class Article {
+        -id: String
+        -nom: String
+        -couleur: String
+        -pointure: String
+        -prix_unitaire: Float
+        -categorie: String
+        -qte_disponible: Int
+    }
+
+    class Panier {
+        -commande_id: String
+        -article_id: String
+        -quantite: Int
+        -sous_total: Float
+    }
+
+    class Client {
+        -id: String
+        -numero_tel: String
+    }
+
+    class EnumEtatCmd {
+        -id: String
+        -libelle: String
+    }
+
+    class EtatCommande {
+        -id: String
+        -commande_id: String
+        -enum_etat_id: String
+        -date_debut: Date
+        -date_fin: Date
+    }
+
+    class Ville {
+        -id: String
+        -nom: String
+        -frais_livraison: Float
+        -frequence_livraison: String
+        -region_id: String
+    }
+
+    class Region {
+        -id_region: String
+        -nom_region: String
+    }
+
+    class Operateur {
+        -id: String
+        -nom: String
+        -prenom: String
+        -adresse_mail: String
+        -mdp: String
+    }
+
+    class Operation {
+        -id: String
+        -type_operation: String
+        -date_operation: Date
+        -conclusion: String
+        -commande_id: String
+        -operateur_id: String
+    }
+
+    Commande --> "1..*" Panier
+    Article --> "1..*" Panier
+    Client --> "1..*" Commande
+    Ville --> "1..*" Commande
+    Region --> "1..*" Ville
+    Commande --> "1..*" EtatCommande
+    EnumEtatCmd --> "1..*" EtatCommande
+    Commande --> "1..*" Operation
+    Operateur --> "1..*" Operation
