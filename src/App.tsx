@@ -3,6 +3,7 @@ import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import logo from './images/logoX10.jpg';
 import Communication from './pages/services/Communication';
 import Evenementiel from './pages/services/Evenementiel';
 import Restauration from './pages/services/Restauration';
@@ -106,7 +107,7 @@ function App() {
 
   if (isLoading) {
     return <div className="loading-screen">
-      <img src="/images/logoX10.jpg" alt="Loading..." className="loading-logo" />
+      <img src={logo} alt="Loading..." className="loading-logo" />
     </div>;
   }
 
@@ -132,7 +133,7 @@ function App() {
       {/* Sidebar */}
       <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
-          <img src="/images/logoX10.jpg" alt="Logo X10" />
+          <img src={logo} alt="Logo X10" />
           <button className="close-sidebar" onClick={toggleSidebar}>×</button>
         </div>
         <button className="sidebar-toggle-arrow" onClick={toggleSidebar}>
@@ -159,7 +160,7 @@ function App() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <Link className="navbar-brand" to="/">
-            <img src="/images/logoX10.jpg" alt="Logo X10" className="navbar-logo" />
+            <img src={logo} alt="Logo X10" className="navbar-logo" />
           </Link>
           <button 
             className="navbar-toggler" 
@@ -220,7 +221,7 @@ function App() {
                       <div className="row h-100 align-items-center">
                         <div className="col-12 text-center">
                           <div className="hero-logo">
-                            <img src="/images/logoX10.jpg" alt="Logo X10" className="hero-logo-img" />
+                            <img src={logo} alt="Logo X10" className="hero-logo-img" />
                           </div>
                           <p className="lead text-white">Votre partenaire de confiance</p>
                         </div>
