@@ -19,6 +19,28 @@ function App() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
   useEffect(() => {
+    // Masquer la barre d'annonce sur les autres pages que l'accueil
+    setShowAnnouncement(location.pathname === '/');
+    // Ajouter ou retirer la classe du body selon la présence de la barre d'annonce
+    if (location.pathname === '/') {
+      document.body.classList.add('has-announcement');
+      document.body.classList.remove('without-announcement');
+    } else {
+      document.body.classList.remove('has-announcement');
+      document.body.classList.add('without-announcement');
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
     // Créer des confettis
     const createConfetti = () => {
       const confetti = document.createElement('div');
@@ -36,31 +58,10 @@ function App() {
     // Créer des confettis toutes les 300ms
     const confettiInterval = setInterval(createConfetti, 300);
 
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 50;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
-
-      // Animation des sections au défilement
-      const sections = document.querySelectorAll('section');
-      sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (sectionTop < windowHeight * 0.75) {
-          section.classList.add('visible');
-        }
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-
     return () => {
-      window.removeEventListener('scroll', handleScroll);
       clearInterval(confettiInterval);
     };
-  }, [scrolled]);
+  }, []);
 
   useEffect(() => {
     const servicePaths = [
@@ -113,8 +114,8 @@ function App() {
     <div className="App">
       <div className="event-pattern"></div>
       
-      {/* Announcement Bar */}
-      {showAnnouncement && (
+      {/* Announcement Bar - uniquement sur la page d'accueil */}
+      {showAnnouncement && location.pathname === '/' && (
         <div className="announcement-bar">
           <div className="container">
             <p className="announcement-text">
@@ -151,14 +152,14 @@ function App() {
       {/* Overlay */}
       {sidebarOpen && <div className="sidebar-overlay" onClick={toggleSidebar}></div>}
 
-      {/* Navigation */}
-      <nav className={`navbar navbar-expand-lg navbar-dark bg-dark fixed-top ${scrolled ? 'scrolled' : ''}`}>
+      {/* Navigation avec classe conditionnelle basée sur la présence de la barre d'annonce */}
+      <nav className={`navbar navbar-expand-lg navbar-dark fixed-top ${scrolled ? 'scrolled' : ''} ${location.pathname === '/' ? 'with-announcement' : 'without-announcement'}`}>
         <div className="container">
           <button className="navbar-toggler sidebar-toggle" type="button" onClick={toggleSidebar}>
             <span className="navbar-toggler-icon"></span>
           </button>
           <Link className="navbar-brand" to="/">
-            <img src="/images/logoX10.jpg" alt="Logo X10" />
+            <img src="/images/logoX10.jpg" alt="Logo X10" className="navbar-logo" />
           </Link>
           <button 
             className="navbar-toggler" 
