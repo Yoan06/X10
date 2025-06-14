@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/X10/static/css/main.07cf3013.css",
-    "main.js": "/X10/static/js/main.eb503f2f.js",
+    "main.css": "/X10/static/css/main.df22c62b.css",
+    "main.js": "/X10/static/js/main.88820022.js",
     "static/js/453.78da6cad.chunk.js": "/X10/static/js/453.78da6cad.chunk.js",
     "static/media/logoX10.jpg": "/X10/static/media/logoX10.7290d2004df1a4e4c34d.jpg",
     "static/media/can-stadium.jpg": "/X10/static/media/can-stadium.4a9aa22a6df2f9f219d9.jpg",
     "static/media/football-pattern.png": "/X10/static/media/football-pattern.cfde5f742fad06c1ef8b.png",
     "index.html": "/X10/index.html",
-    "main.07cf3013.css.map": "/X10/static/css/main.07cf3013.css.map",
-    "main.eb503f2f.js.map": "/X10/static/js/main.eb503f2f.js.map",
+    "main.df22c62b.css.map": "/X10/static/css/main.df22c62b.css.map",
+    "main.88820022.js.map": "/X10/static/js/main.88820022.js.map",
     "453.78da6cad.chunk.js.map": "/X10/static/js/453.78da6cad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.07cf3013.css",
-    "static/js/main.eb503f2f.js"
+    "static/css/main.df22c62b.css",
+    "static/js/main.88820022.js"
   ]
 }
