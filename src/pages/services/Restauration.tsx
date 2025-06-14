@@ -1,82 +1,101 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Restauration: React.FC = () => {
   return (
-    <div className="service-page restauration-page py-5">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-10 mx-auto">
+    <div className="page-container restauration-page">
+      {/* Header de la page */}
+      <section className="page-header">
+        <div className="container text-center">
+          <h1>Service de Restauration</h1>
+          <p className="lead">Une expérience culinaire exceptionnelle pour vos événements</p>
+        </div>
+      </section>
+
+      {/* Contenu principal */}
+      <section className="page-content">
+        <div className="container">
+          <div className="content-wrapper">
             <div className="row">
-              <div className="col-md-6 mb-4 mb-md-0">
-                <img src="/images/restauration-hero.jpg" alt="Restauration" className="img-fluid rounded" />
-              </div>
-              <div className="col-md-6">
-                <div className="d-flex flex-wrap mb-3">
-                  <span className="badge bg-light text-dark me-2 mb-2">Traiteur</span>
-                  <span className="badge bg-light text-dark me-2 mb-2">Buffets</span>
-                  <span className="badge bg-light text-dark me-2 mb-2">Cocktails</span>
-                  <span className="badge bg-light text-dark mb-2">Événements</span>
+              <div className="col-lg-8 mx-auto">
+                <div className="service-illustration">
+                  <img src="/images/restauration-detail.jpg" alt="Service de Restauration" />
                 </div>
-                <h1 className="mb-3">Saveurs d'exception : nos services de Restauration événementielle</h1>
-                <p className="text-muted mb-4">
-                  Par <span className="fw-bold">L'équipe X10</span> - <i className="far fa-calendar-alt"></i> 15/08/2023
-                </p>
-                <p className="lead mb-4">
-                  Découvrez notre service de restauration événementielle de qualité, adapté à tous vos besoins et occasions spéciales. Nous vous offrons une expérience culinaire inoubliable, de la conception des menus à la mise en œuvre, pour faire de votre événement un succès gustatif.
-                </p>
-                
-                <h2 className="h4 mt-5 mb-3">Nos Offres de Restauration</h2>
-                <ul className="list-unstyled">
-                  <li className="mb-3">
-                    <i className="fas fa-utensils text-success me-2"></i>
-                    <span className="fw-bold">Traiteurs Professionnels :</span> Service de restauration haut de gamme pour vos événements, avec cuisine sur place et options personnalisées.
-                  </li>
-                  <li className="mb-3">
-                    <i className="fas fa-utensils text-success me-2"></i>
-                    <span className="fw-bold">Buffets sur Mesure :</span> Buffets adaptés à vos besoins et à votre budget, avec menus personnalisés et service de qualité.
-                  </li>
-                  <li className="mb-3">
-                    <i className="fas fa-utensils text-success me-2"></i>
-                    <span className="fw-bold">Service de Bar :</span> Bar professionnel pour vos événements, avec barmans expérimentés et cocktails signature.
-                  </li>
-                  <li className="mb-3">
-                    <i className="fas fa-utensils text-success me-2"></i>
-                    <span className="fw-bold">Options Spéciales :</span> Solutions adaptées à tous les régimes et thèmes, incluant cuisine internationale et événements thématiques.
-                  </li>
-                </ul>
-
-                <h2 className="h4 mt-5 mb-3">Nos Menus Phares</h2>
-                <ul className="list-unstyled">
-                  <li className="mb-3">
-                    <i className="fas fa-concierge-bell text-info me-2"></i>
-                    <span className="fw-bold">Menu Business :</span> Idéal pour les réunions et séminaires (à partir de 25€/personne).
-                  </li>
-                  <li className="mb-3">
-                    <i className="fas fa-concierge-bell text-info me-2"></i>
-                    <span className="fw-bold">Menu Premium :</span> Pour les événements importants (à partir de 45€/personne).
-                  </li>
-                  <li className="mb-3">
-                    <i className="fas fa-concierge-bell text-info me-2"></i>
-                    <span className="fw-bold">Menu Événementiel :</span> Pour les grands événements (sur devis).
-                  </li>
-                </ul>
-
-                <h2 className="h4 mt-5 mb-3">Nos Engagements Qualité</h2>
+                <h2>Notre Expertise en Restauration</h2>
                 <p>
-                  Nous nous engageons à utiliser des ingrédients frais et de saison, à respecter les délais de service et à garantir la satisfaction totale de nos clients. La qualité est au cœur de chacune de nos prestations.
+                  Nous proposons des services de restauration haut de gamme adaptés à tous types d'événements.
+                  Notre équipe de chefs expérimentés crée des menus personnalisés qui raviront vos convives.
                 </p>
+              </div>
+            </div>
 
-                <div className="text-center mt-5">
-                  <Link to="/contact" className="btn btn-primary btn-lg">
-                    Demander un devis personnalisé
-                  </Link>
+            <div className="feature-list mt-5">
+              <h3>Nos Services Comprennent</h3>
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="feature-item">
+                    <h4>Traiteur Événementiel</h4>
+                    <p>Service traiteur professionnel pour vos événements d'entreprise et cérémonies</p>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="feature-item">
+                    <h4>Cocktails & Réceptions</h4>
+                    <p>Organisation de cocktails et réceptions avec un service impeccable</p>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="feature-item">
+                    <h4>Cuisine sur Mesure</h4>
+                    <p>Menus personnalisés selon vos préférences et restrictions alimentaires</p>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="feature-item">
+                    <h4>Service Complet</h4>
+                    <p>Personnel de service qualifié et équipement professionnel inclus</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Section des caractéristiques */}
+      <section className="features-section">
+        <div className="container">
+          <h2 className="section-title">Pourquoi Choisir Notre Service de Restauration ?</h2>
+          <div className="row">
+            <div className="col-md-4">
+              <div className="service-card">
+                <h3>Qualité Premium</h3>
+                <p>Ingrédients frais et de première qualité pour des plats exceptionnels</p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="service-card">
+                <h3>Flexibilité</h3>
+                <p>Adaptation à vos besoins spécifiques et à votre budget</p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="service-card">
+                <h3>Professionnalisme</h3>
+                <p>Une équipe expérimentée à votre service</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section de contact */}
+      <section className="contact-section">
+        <div className="container text-center">
+          <h2>Intéressé par nos Services de Restauration ?</h2>
+          <p>Contactez-nous pour discuter de votre projet et obtenir un devis personnalisé</p>
+          <button className="action-button mt-4">Demander un Devis</button>
+        </div>
+      </section>
     </div>
   );
 };
