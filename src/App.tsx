@@ -184,15 +184,18 @@ function App() {
                 <ul className="footer-contact">
                   <li>
                     <i className="fas fa-map-marker-alt"></i>
-                    123 Rue du Commerce<br />75001 Paris, France
+                    46, BD ZERKTOUNI ETG5 N17<br />CASABLANCA, MAROC
                   </li>
                   <li>
                     <i className="fas fa-phone"></i>
-                    +33 1 23 45 67 89
+                    <div className="phone-numbers">
+                      <span>🇲🇦 +212 763 733 633</span><br />
+                      <span>🇨🇮 +225 07 02 20 91 15</span>
+                    </div>
                   </li>
                   <li>
                     <i className="fas fa-envelope"></i>
-                    contact@x10.com
+                    entreprisex10sarl@gmail.com
                   </li>
                 </ul>
               </div>

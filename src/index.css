@@ -62,3 +62,42 @@ body {
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Styles pour les numéros de téléphone dans le footer */
+.footer-contact .phone-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.footer-contact .phone-numbers span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.footer-contact li {
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer-contact i {
+  margin-top: 0.2rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 576px) {
+  .footer-contact .phone-numbers span {
+    font-size: 0.9rem;
+  }
+  
+  .footer-contact li {
+    gap: 0.8rem;
+  }
+}
