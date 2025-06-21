@@ -50,6 +50,22 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Effet pour le scroll au rafraîchissement
+  useEffect(() => {
+    // Scroll instantané au chargement initial
+    window.scrollTo(0, 0);
+
+    // Gestionnaire d'événement pour le rafraîchissement
+    const handleBeforeUnload = () => {
+      window.scrollTo(0, 0);
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };

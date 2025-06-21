@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 
@@ -42,6 +42,14 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
   const location = useLocation();
   const isServicesPage = location.pathname.includes('/services/');
 
+  // Effet pour scroller vers le haut lors des changements de page
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [location.pathname]);
+
   const getCustomVariants = () => {
     if (isServicesPage) {
       return {
@@ -68,6 +76,10 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
         exit="exit"
         variants={getCustomVariants()}
         className={`page-content ${isServicesPage ? 'services-page' : ''}`}
+        onAnimationStart={() => {
+          // Assure un scroll instantané au début de l'animation
+          window.scrollTo(0, 0);
+        }}
       >
         {children}
       </motion.div>
