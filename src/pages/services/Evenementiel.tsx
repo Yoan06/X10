@@ -17,31 +17,34 @@ const Evenementiel: React.FC = () => {
                   <span className="badge bg-light text-dark me-2 mb-2">Séminaires</span>
                   <span className="badge bg-light text-dark mb-2">Team Building</span>
                 </div>
-                <h1 className="mb-3">Créer des moments inoubliables : nos services Événementiels</h1>
-                <p className="text-muted mb-4">
-                  Par <span className="fw-bold">L'équipe X10</span> - <i className="far fa-calendar-alt"></i> 15/08/2023
-                </p>
+                <h1 className="mb-3">Créer des moments inoubliables : nos services bien-être & événementiels</h1>
+
                 <p className="lead mb-4">
-                  Nous transformons vos idées en événements mémorables. Notre expertise en organisation événementielle garantit le succès de vos manifestations professionnelles, des séminaires d'entreprise aux lancements de produits spectaculaires.
+                Offrez-vous bien plus qu’un simple séjour : X10 vous propose des prestations sur mesure pour prendre soin de vous, que ce soit pour des vacances reposantes, un moment de bien-être en famille, ou une escapade ressourçante.
+                </p>
+                <h2 className="h4 mt-5 mb-3">Un accompagnement personnalisé pour vos vacances
+                </h2>
+                <p className="lead mb-4">
+                Notre mission : faire de votre séjour une expérience unique, mêlant détente, confort et attention. Nous vous accompagnons à chaque étape pour que vous puissiez vous relâcher pleinement.
                 </p>
                 
                 <h2 className="h4 mt-5 mb-3">Nos Services Détaillés</h2>
                 <ul className="list-unstyled">
                   <li className="mb-3">
                     <i className="fas fa-check-circle text-success me-2"></i>
-                    <span className="fw-bold">Séminaires d'Entreprise :</span> Organisation complète de vos séminaires, incluant le choix du lieu, la logistique, et l'animation.
+                    <span className="fw-bold">Séjours Bien-Être :</span> Hébergements confortables, soins relaxants, activités douces et cuisine équilibrée pour un repos complet.
                   </li>
                   <li className="mb-3">
                     <i className="fas fa-check-circle text-success me-2"></i>
-                    <span className="fw-bold">Conférences :</span> Gestion de vos événements de conférence, de la programmation à l'accueil des participants et au support technique.
+                    <span className="fw-bold">Accompagnement personnalisé : </span> Un suivi adapté pour les personnes seules, âgées ou ayant des besoins spécifiques, avec bienveillance et professionnalisme.
                   </li>
                   <li className="mb-3">
                     <i className="fas fa-check-circle text-success me-2"></i>
-                    <span className="fw-bold">Team Building :</span> Activités de renforcement d'équipe personnalisées pour stimuler la cohésion et la motivation.
+                    <span className="fw-bold">Événements sur-mesure : </span> Organisation d’anniversaires, célébrations privées ou petites réceptions, dans des cadres chaleureux et conviviaux.
                   </li>
                   <li className="mb-3">
                     <i className="fas fa-check-circle text-success me-2"></i>
-                    <span className="fw-bold">Lancements de Produits :</span> Création d'événements impactants pour le lancement de vos nouveaux produits ou services.
+                    <span className="fw-bold">Loisirs & Activités :</span> Excursions, ateliers créatifs, animations douces et activités culturelles selon vos envies.
                   </li>
                 </ul>
 

@@ -1,60 +1,73 @@
 import React from 'react';
 
-const ImportExport: React.FC = () => {
+const Transfert: React.FC = () => {
   return (
-    <div className="service-page import-export-page py-5">
+    <div className="service-page transfert-page py-5">
       <div className="container">
         <div className="row">
           <div className="col-lg-10 mx-auto">
             <div className="row">
               <div className="col-md-6 mb-4 mb-md-0">
-                <img src="/images/import-export-hero.jpg" alt="Import Export" className="img-fluid rounded" />
+                <img
+                  src="/images/transfert-argent.jpg"
+                  alt="Service de transfert d'argent"
+                  className="img-fluid rounded"
+                />
               </div>
               <div className="col-md-6">
                 <div className="d-flex flex-wrap mb-3">
-                  <span className="badge bg-light text-dark me-2 mb-2">Logistique</span>
-                  <span className="badge bg-light text-dark me-2 mb-2">Douanes</span>
-                  <span className="badge bg-light text-dark me-2 mb-2">Sourcing</span>
-                  <span className="badge bg-light text-dark mb-2">Distribution</span>
+                  <span className="badge bg-light text-dark me-2 mb-2">Transferts</span>
+                  <span className="badge bg-light text-dark me-2 mb-2">Afrique</span>
+                  <span className="badge bg-light text-dark me-2 mb-2">Europe</span>
+                  <span className="badge bg-light text-dark mb-2">Échanges de devises</span>
                 </div>
-                <h1 className="mb-3">Faciliter les échanges mondiaux : nos services d'Import Export</h1>
-                <p className="text-muted mb-4">
-                  Par <span className="fw-bold">L'équipe X10</span> - <i className="far fa-calendar-alt"></i> 15/08/2023
-                </p>
+
+                <h1 className="mb-3">Services de Transfert & Échange</h1>
+
                 <p className="lead mb-4">
-                  Nous simplifions vos opérations d'importation et d'exportation, en vous offrant des solutions complètes et sur mesure pour développer votre commerce international. De la logistique aux formalités douanières, nous gérons l'ensemble du processus.
+                  Envie d’envoyer de l’argent rapidement et en toute sécurité à vos proches à l’étranger ?  
+                  <strong>Les Délices des Mains d’Or</strong>, ce n’est pas que de la restauration : c’est aussi un service fiable d’échanges et de transferts d'argent vers l’Afrique et l’Europe.
                 </p>
-                
-                <h2 className="h4 mt-5 mb-3">Nos Services Détaillés</h2>
+
+                <h2 className="h4 mt-5 mb-3">Nos Services</h2>
                 <ul className="list-unstyled">
                   <li className="mb-3">
                     <i className="fas fa-check-circle text-success me-2"></i>
-                    <span className="fw-bold">Conseil en Stratégie :</span> Analyse de marché, identification d'opportunités et élaboration de stratégies d'entrée sur de nouveaux marchés.
+                    <strong>Transfert d'argent :</strong> vers de nombreux pays d’Afrique (Côte d’Ivoire, Sénégal, Mali, Burkina Faso, RDC, etc.) et en Europe.
                   </li>
                   <li className="mb-3">
                     <i className="fas fa-check-circle text-success me-2"></i>
-                    <span className="fw-bold">Gestion Logistique :</span> Optimisation de la chaîne d'approvisionnement, gestion des transports et des douanes pour un flux sans accroc.
+                    <strong>Échange de devises :</strong> FCFA, euro, dirham et autres monnaies locales selon disponibilité.
                   </li>
                   <li className="mb-3">
                     <i className="fas fa-check-circle text-success me-2"></i>
-                    <span className="fw-bold">Sourcing et Approvisionnement :</span> Recherche de fournisseurs fiables et négociation des meilleures conditions pour vos importations.
+                    <strong>Suivi personnalisé :</strong> nous vous accompagnons à chaque étape pour garantir la sécurité et la rapidité de vos transactions.
                   </li>
                   <li className="mb-3">
                     <i className="fas fa-check-circle text-success me-2"></i>
-                    <span className="fw-bold">Distribution et Vente :</span> Mise en place de réseaux de distribution efficaces et support commercial pour vos exportations.
+                    <strong>Fiabilité et transparence :</strong> taux de change clairs et délais respectés.
                   </li>
                 </ul>
 
-                <h2 className="h4 mt-5 mb-3">Pourquoi choisir nos services d'Import Export ?</h2>
+                <h2 className="h4 mt-5 mb-3">À qui s’adressent nos services ?</h2>
                 <p>
-                  Notre expertise et notre réseau international garantissent des transactions fluides et rentables. Nous vous aidons à naviguer dans la complexité du commerce international pour maximiser votre succès.
+                  Nos services s’adressent à toutes les personnes :
                 </p>
+                <ul>
+                  <li>Souhaitant soutenir leur famille à l’étranger</li>
+                  <li>Effectuant des achats ou paiements intercontinentaux</li>
+                  <li>Ayant besoin de convertir ou transférer des devises de manière sécurisée</li>
+                </ul>
 
                 <div className="text-center mt-5">
-                  <a href="/contact" className="btn btn-primary btn-lg">
-                    Demander une consultation
+                  <a href="tel:+212766340101" className="btn btn-primary btn-lg">
+                    Nous contacter pour un transfert
                   </a>
                 </div>
+
+                <p className="text-muted mt-3 text-center">
+                  📍 Rue Libourne, La Gironde – Casablanca | ☎️ +212 7 6634 0101 / +212 6 5314 3308
+                </p>
               </div>
             </div>
           </div>
@@ -64,4 +77,4 @@ const ImportExport: React.FC = () => {
   );
 };
 
-export default ImportExport; 
+export default Transfert;

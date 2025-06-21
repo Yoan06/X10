@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import logo from './images/logoX10.jpg';
+import PageTransition from './components/PageTransition';
 import Home from './pages/Home';
 import Communication from './pages/services/Communication';
 import Evenementiel from './pages/services/Evenementiel';
@@ -131,31 +131,24 @@ function App() {
       </nav>
 
       {/* Main Content avec Transitions */}
-      <TransitionGroup>
-        <CSSTransition
-          key={location.pathname}
-          timeout={500}
-          classNames="page-transition"
-          unmountOnExit
-        >
-          <main className="main-content">
-            <Routes location={location}>
-              <Route path="/" element={<Home />} />
-              <Route path="/services/*">
-                <Route path="communication" element={<Communication />} />
-                <Route path="evenementiel" element={<Evenementiel />} />
-                <Route path="restauration" element={<Restauration />} />
-                <Route path="mediation-intermediation" element={<MediationIntermediation />} />
-                <Route path="import-export" element={<ImportExport />} />
-                <Route path="negoce" element={<Negoce />} />
-              </Route>
-              <Route path="/contact" element={<Contact />} />
-              {/* Redirection par défaut vers la page d'accueil */}
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-          </main>
-        </CSSTransition>
-      </TransitionGroup>
+      <PageTransition>
+        <main className="main-content">
+          <Routes location={location}>
+            <Route path="/" element={<Home />} />
+            <Route path="/services/*">
+              <Route path="communication" element={<Communication />} />
+              <Route path="evenementiel" element={<Evenementiel />} />
+              <Route path="restauration" element={<Restauration />} />
+              <Route path="mediation-intermediation" element={<MediationIntermediation />} />
+              <Route path="import-export" element={<ImportExport />} />
+              <Route path="negoce" element={<Negoce />} />
+            </Route>
+            <Route path="/contact" element={<Contact />} />
+            {/* Redirection par défaut vers la page d'accueil */}
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
+      </PageTransition>
 
       {/* Footer */}
       <footer className="footer">

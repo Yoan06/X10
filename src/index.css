@@ -5,9 +5,60 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Styles pour les transitions de page */
+.page-content {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin: 1rem auto;
+  padding: 2rem;
+  will-change: transform, opacity;
+  perspective: 1000px;
+}
+
+/* Style spécifique pour les pages de services */
+.services-page {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-left: 4px solid var(--primary-color, #009E49);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.1),
+    -5px 0 15px rgba(0, 158, 73, 0.1);
+  transform-origin: center right;
+}
+
+/* Ensure content doesn't jump during transitions */
+.page-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Prevent scrollbar jump during transitions */
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+/* Prevent unwanted horizontal scroll during animations */
+body {
+  overflow-x: hidden;
+}
+
+/* Amélioration de la performance des animations */
+.page-content * {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
