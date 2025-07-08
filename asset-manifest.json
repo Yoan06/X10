@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/X10/static/css/main.741026d7.css",
-    "main.js": "/X10/static/js/main.cff0b4f8.js",
-    "static/js/453.78da6cad.chunk.js": "/X10/static/js/453.78da6cad.chunk.js",
-    "static/media/Hebergement.png": "/X10/static/media/Hebergement.0944ab5c00c9d14186d2.png",
-    "static/media/Ticket.png": "/X10/static/media/Ticket.e8ad2d182e2611877a51.png",
-    "static/media/Transport.png": "/X10/static/media/Transport.e7d06d9800d05898d6c3.png",
-    "static/media/Restauration.png": "/X10/static/media/Restauration.e2736297daa4cee22150.png",
-    "static/media/hebergementpage.png": "/X10/static/media/hebergementpage.f3a99f3205cd5a6a98c6.png",
-    "static/media/transportpage.jpg": "/X10/static/media/transportpage.6e6b58b1e68027c5588e.jpg",
-    "static/media/logoX10.jpg": "/X10/static/media/logoX10.7290d2004df1a4e4c34d.jpg",
-    "static/media/can-stadium.jpg": "/X10/static/media/can-stadium.4a9aa22a6df2f9f219d9.jpg",
-    "static/media/X10FONDPAGE.jpg": "/X10/static/media/X10FONDPAGE.a9990489d8c73cacd0cc.jpg",
-    "index.html": "/X10/index.html",
-    "main.741026d7.css.map": "/X10/static/css/main.741026d7.css.map",
-    "main.cff0b4f8.js.map": "/X10/static/js/main.cff0b4f8.js.map",
-    "453.78da6cad.chunk.js.map": "/X10/static/js/453.78da6cad.chunk.js.map"
+    "main.css": "/static/css/main.9b7c951c.css",
+    "main.js": "/static/js/main.f6df8441.js",
+    "static/js/453.78da6cad.chunk.js": "/static/js/453.78da6cad.chunk.js",
+    "static/media/Hebergement.png": "/static/media/Hebergement.0944ab5c00c9d14186d2.png",
+    "static/media/Ticket.png": "/static/media/Ticket.e8ad2d182e2611877a51.png",
+    "static/media/Transport.png": "/static/media/Transport.e7d06d9800d05898d6c3.png",
+    "static/media/Restauration.png": "/static/media/Restauration.e2736297daa4cee22150.png",
+    "static/media/hebergementpage.png": "/static/media/hebergementpage.f3a99f3205cd5a6a98c6.png",
+    "static/media/transportpage.jpg": "/static/media/transportpage.6e6b58b1e68027c5588e.jpg",
+    "static/media/logoX10.jpg": "/static/media/logoX10.7290d2004df1a4e4c34d.jpg",
+    "static/media/can-stadium.jpg": "/static/media/can-stadium.4a9aa22a6df2f9f219d9.jpg",
+    "static/media/X10FONDPAGE.jpg": "/static/media/X10FONDPAGE.a9990489d8c73cacd0cc.jpg",
+    "index.html": "/index.html",
+    "main.9b7c951c.css.map": "/static/css/main.9b7c951c.css.map",
+    "main.f6df8441.js.map": "/static/js/main.f6df8441.js.map",
+    "453.78da6cad.chunk.js.map": "/static/js/453.78da6cad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.741026d7.css",
-    "static/js/main.cff0b4f8.js"
+    "static/css/main.9b7c951c.css",
+    "static/js/main.f6df8441.js"
   ]
 }
