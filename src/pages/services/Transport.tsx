@@ -1,56 +1,56 @@
 import React from 'react';
+import transportpage from '../../images/transportpage.jpg';
 
-const Evenementiel: React.FC = () => {
+const Transport: React.FC = () => {
   return (
-    <div className="service-page evenementiel-page py-5">
+    <div className="service-page transport-page py-5">
       <div className="container">
         <div className="row">
           <div className="col-lg-10 mx-auto">
             <div className="row">
-              <div className="col-md-6 mb-4 mb-md-0">
-                <img src="/images/evenementiel-hero.jpg" alt="Événementiel" className="img-fluid rounded" />
+              <div className="col-md-6 mb-4 mb-md-0 transport-image-container">
+                <img src={transportpage} alt="Transport" className="img-fluid rounded transport-hero-img" />
               </div>
               <div className="col-md-6">
                 <div className="d-flex flex-wrap mb-3">
-                  <span className="badge bg-light text-dark me-2 mb-2">Organisation</span>
-                  <span className="badge bg-light text-dark me-2 mb-2">Lancement</span>
-                  <span className="badge bg-light text-dark me-2 mb-2">Séminaires</span>
-                  <span className="badge bg-light text-dark mb-2">Team Building</span>
+                  <span className="badge bg-light text-dark me-2 mb-2">Logistique</span>
+                  <span className="badge bg-light text-dark me-2 mb-2">Voyages</span>
+                  <span className="badge bg-light text-dark me-2 mb-2">Livraison</span>
+                  <span className="badge bg-light text-dark mb-2">Navettes</span>
                 </div>
-                <h1 className="mb-3">Créer des moments inoubliables : nos services bien-être & événementiels</h1>
+                <h1 className="mb-3">Transport : Déplacements fiables et logistique efficace</h1>
 
                 <p className="lead mb-4">
-                Offrez-vous bien plus qu’un simple séjour : X10 vous propose des prestations sur mesure pour prendre soin de vous, que ce soit pour des vacances reposantes, un moment de bien-être en famille, ou une escapade ressourçante.
+                X10 vous offre des solutions de transport adaptées à tous vos besoins, qu'il s'agisse de déplacements personnels, de logistique pour événements, ou de livraison de marchandises. Nous garantissons sécurité, confort et ponctualité.
                 </p>
-                <h2 className="h4 mt-5 mb-3">Un accompagnement personnalisé pour vos vacances
-                </h2>
+                <h2 className="h4 mt-5 mb-3">Un service de transport sur mesure pour chaque client</h2>
                 <p className="lead mb-4">
-                Notre mission : faire de votre séjour une expérience unique, mêlant détente, confort et attention. Nous vous accompagnons à chaque étape pour que vous puissiez vous relâcher pleinement.
+                Notre mission est de simplifier vos déplacements et votre logistique en vous proposant des véhicules modernes et des chauffeurs expérimentés. Profitez d'un service personnalisé qui répond à vos attentes spécifiques.
                 </p>
                 
                 <h2 className="h4 mt-5 mb-3">Nos Services Détaillés</h2>
                 <ul className="list-unstyled">
                   <li className="mb-3">
                     <i className="fas fa-check-circle text-success me-2"></i>
-                    <span className="fw-bold">Séjours Bien-Être :</span> Hébergements confortables, soins relaxants, activités douces et cuisine équilibrée pour un repos complet.
+                    <span className="fw-bold">Transport de Personnes :</span> Navettes aéroport, transferts privés, et mise à disposition de véhicules avec chauffeur pour vos événements et déplacements quotidiens.
                   </li>
                   <li className="mb-3">
                     <i className="fas fa-check-circle text-success me-2"></i>
-                    <span className="fw-bold">Accompagnement personnalisé : </span> Un suivi adapté pour les personnes seules, âgées ou ayant des besoins spécifiques, avec bienveillance et professionnalisme.
+                    <span className="fw-bold">Transport de Marchandises : </span> Solutions logistiques complètes, du petit colis aux marchandises volumineuses, avec suivi en temps réel et respect des délais.
                   </li>
                   <li className="mb-3">
                     <i className="fas fa-check-circle text-success me-2"></i>
-                    <span className="fw-bold">Événements sur-mesure : </span> Organisation d’anniversaires, célébrations privées ou petites réceptions, dans des cadres chaleureux et conviviaux.
+                    <span className="fw-bold">Location de Véhicules : </span> Une flotte variée de véhicules adaptés à vos besoins, avec ou sans chauffeur, pour une flexibilité maximale.
                   </li>
                   <li className="mb-3">
                     <i className="fas fa-check-circle text-success me-2"></i>
-                    <span className="fw-bold">Loisirs & Activités :</span> Excursions, ateliers créatifs, animations douces et activités culturelles selon vos envies.
+                    <span className="fw-bold">Voyages Organisés :</span> Circuits touristiques, excursions et voyages d'affaires, planifiés avec soin pour une expérience inoubliable.
                   </li>
                 </ul>
 
-                <h2 className="h4 mt-5 mb-3">Pourquoi choisir nos services événementiels ?</h2>
+                <h2 className="h4 mt-5 mb-3">Pourquoi choisir nos services de transport ?</h2>
                 <p>
-                  Nous mettons un point d'honneur à la créativité, à la précision et à l'innovation pour chaque événement. Notre équipe expérimentée assure une planification sans faille et une exécution parfaite, vous permettant de vous concentrer sur vos invités.
+                  Nous nous engageons sur la ponctualité, la sécurité et la satisfaction client. Notre expertise logistique et notre flotte moderne nous permettent de répondre à toutes vos exigences de transport avec efficacité et professionnalisme.
                 </p>
 
                 <div className="text-center mt-5">
@@ -67,4 +67,4 @@ const Evenementiel: React.FC = () => {
   );
 };
 
-export default Evenementiel; 
+export default Transport; 

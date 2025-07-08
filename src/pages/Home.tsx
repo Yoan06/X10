@@ -1,68 +1,66 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../images/logoX10.jpg';
 import heroBg from '../images/hero-bg.jpg';
 import canStadium from '../images/can-stadium.jpg';
+import X10FondPage from '../images/X10FONDPAGE.jpg';
 
-// Import des images temporaires (à remplacer par vos images)
-import communicationTemp from '../images/communication-temp.jpg';
-import evenementielTemp from '../images/evenementiel-temp.jpg';
-import restaurationTemp from '../images/restauration-temp.jpg';
-import mediationTemp from '../images/mediation-temp.jpg';
-import importExportTemp from '../images/import-export-temp.jpg';
-import negoceTemp from '../images/negoce-temp.jpg';
+import HebergementImage from '../images/Hebergement.png';
+import RestaurationImage from '../images/Restauration.png';
+import TicketImage from '../images/Ticket.png';
+import TransportImage from '../images/Transport.png';
 
 const services = [
   {
     id: 1,
-    title: "Communication",
-    description: "Stratégies de communication innovantes et efficaces pour votre entreprise",
-    image: heroBg,
-    path: "/services/communication"
+    title: "Hébergement",
+    description: "Des solutions d'hébergement adaptées à tous vos besoins.",
+    image: HebergementImage,
+    path: "/services/hebergement"
   },
   {
     id: 2,
-    title: "Événementiel",
-    description: "Organisation d'événements professionnels sur mesure",
-    image: heroBg,
-    path: "/services/evenementiel"
+    title: "Transport",
+    description: "Services de transport fiables et efficaces pour vos déplacements.",
+    image: TransportImage,
+    path: "/services/transport"
   },
   {
     id: 3,
     title: "Restauration",
     description: "Services de restauration haut de gamme pour vos événements",
-    image: heroBg,
+    image: RestaurationImage,
     path: "/services/restauration"
   },
   {
     id: 4,
-    title: "Médiation",
-    description: "Solutions de médiation professionnelle pour vos besoins",
-    image: heroBg,
-    path: "/services/mediation-intermediation"
-  },
-  {
-    id: 5,
-    title: "Import Export",
-    description: "Services d'import-export internationaux",
-    image: heroBg,
-    path: "/services/import-export"
-  },
-  {
-    id: 6,
-    title: "Négoce",
-    description: "Solutions de négoce adaptées à vos besoins commerciaux",
-    image: heroBg,
-    path: "/services/negoce"
+    title: "Ticket",
+    description: "Facilitez l'accès à vos événements et services avec nos solutions de billetterie.",
+    image: TicketImage,
+    path: "/services/ticket"
   }
 ];
 
 const Home: React.FC = () => {
+  const [currentBg, setCurrentBg] = useState(canStadium);
+
+  useEffect(() => {
+    const images = [canStadium, X10FondPage];
+    let currentIndex = 0;
+
+    const interval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      setCurrentBg(images[currentIndex]);
+    }, 10000); // Change toutes les 10 secondes
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="page-container">
       {/* Hero Section avec Design Mixte */}
       <section className="hero-mixed">
-        <div className="hero-background">
+        <div className="hero-background" style={{ backgroundImage: `url(${currentBg})` }}>
           <div className="stadium-overlay"></div>
         </div>
         <div className="hero-content">
@@ -70,7 +68,6 @@ const Home: React.FC = () => {
             <img src={logo} alt="Logo X10" className="main-logo" />
           </div>
           <p className="hero-tagline">Votre partenaire de confiance pour tous vos besoins professionnels</p>
-          <Link to="/services" className="action-button">Découvrir nos services</Link>
         </div>
       </section>
 

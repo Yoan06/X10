@@ -23,10 +23,6 @@
 
 /* Styles généraux */
 html {
-  background-image: url('./images/logoX10.jpg');
-  background-repeat: repeat;
-  background-size: 100px;
-  background-attachment: fixed;
   font-size: 16px; /* Base font size */
 }
 
@@ -43,6 +39,11 @@ body {
   background-color: var(--light-bg);
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background-image: url('./images/X10FONDPAGE.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -302,6 +303,7 @@ p {
   background-size: cover;
   background-position: center;
   filter: brightness(0.8);
+  transition: background-image 1s ease-in-out; /* Ajout de la transition */
 }
 
 .stadium-overlay {
@@ -372,9 +374,9 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('./images/can-stadium.jpg') center/cover;
+  background: url('./images/X10FONDPAGE.jpg') center/cover; /* Nouvelle image de fond */
   opacity: 0.05;
-  filter: blur(5px);
+  /* filter: blur(5px); -- Garder ou adapter si nécessaire, pas de grayscale */
 }
 
 .services-container {
@@ -415,9 +417,31 @@ p {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Ajuster la taille minimale des cartes */
+  gap: 2rem; /* Réduire légèrement l'espacement */
   padding: 1rem;
+  justify-content: center; /* Centrer les éléments dans la grille */
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Deux colonnes sur les grands écrans */
+    max-width: 1000px; /* Limiter la largeur de la grille pour un meilleur centrage */
+    margin: 0 auto; /* Centrer la grille */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Une seule colonne sur les très petits écrans */
+  }
 }
 
 .service-card {
@@ -575,11 +599,11 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('./images/can-stadium.jpg');
+  background-image: url('./images/X10FONDPAGE.jpg'); /* Nouvelle image de fond */
   background-size: cover;
   background-position: center;
   opacity: 0.1;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); -- Supprimé */
 }
 
 .contact-section .section-title {
@@ -624,9 +648,9 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('./images/can-stadium.jpg') center/cover;
+  background: url('./images/X10FONDPAGE.jpg') center/cover; /* Nouvelle image de fond */
   opacity: 0.05;
-  filter: grayscale(100%) blur(3px);
+  /* filter: grayscale(100%) blur(3px); -- Supprimé */
 }
 
 .footer-content {
@@ -1561,5 +1585,49 @@ img {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
   }
+}
+
+.page-container {
+  background-color: var(--light-bg); /* Ajout d'un fond solide pour les pages */
+  min-height: 100vh; /* S'assurer que le conteneur prend au moins toute la hauteur de la vue */
+}
+
+.transport-page .transport-image-container {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.transport-page .transport-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.ticket-page .ticket-image-container {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.ticket-page .ticket-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.hebergement-page .hebergement-image-container {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.hebergement-page .hebergement-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
 }
 

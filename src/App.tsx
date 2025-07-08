@@ -5,12 +5,10 @@ import './App.css';
 import logo from './images/logoX10.jpg';
 import PageTransition from './components/PageTransition';
 import Home from './pages/Home';
-import Communication from './pages/services/Communication';
-import Evenementiel from './pages/services/Evenementiel';
+import Transport from './pages/services/Transport';
+import Hebergement from './pages/services/Hebergement';
 import Restauration from './pages/services/Restauration';
-import MediationIntermediation from './pages/services/MediationIntermediation';
-import ImportExport from './pages/services/ImportExport';
-import Negoce from './pages/services/Negoce';
+import Ticket from './pages/services/Ticket';
 import Contact from './pages/Contact';
 
 function App() {
@@ -119,12 +117,10 @@ function App() {
           <i className="fas fa-chevron-right"></i>
         </button>
         <ul className="sidebar-menu">
-          <li><Link to="/services/communication" onClick={toggleSidebar} className="dropdown-item">Communication</Link></li>
-          <li><Link to="/services/evenementiel" onClick={toggleSidebar} className="dropdown-item">Événementiel</Link></li>
+          <li><Link to="/services/hebergement" onClick={toggleSidebar} className="dropdown-item">Hébergement</Link></li>
+          <li><Link to="/services/transport" onClick={toggleSidebar} className="dropdown-item">Transport</Link></li>
           <li><Link to="/services/restauration" onClick={toggleSidebar} className="dropdown-item">Restauration</Link></li>
-          <li><Link to="/services/mediation-intermediation" onClick={toggleSidebar} className="dropdown-item">Médiation et Intermédiation</Link></li>
-          <li><Link to="/services/import-export" onClick={toggleSidebar} className="dropdown-item">Import Export</Link></li>
-          <li><Link to="/services/negoce" onClick={toggleSidebar} className="dropdown-item">Négoce</Link></li>
+          <li><Link to="/services/ticket" onClick={toggleSidebar} className="dropdown-item">Ticket</Link></li>
         </ul>
       <div className="sidebar-footer"></div>
       </div>
@@ -152,12 +148,10 @@ function App() {
           <Routes location={location}>
             <Route path="/" element={<Home />} />
             <Route path="/services/*">
-              <Route path="communication" element={<Communication />} />
-              <Route path="evenementiel" element={<Evenementiel />} />
+              <Route path="hebergement" element={<Hebergement />} />
+              <Route path="transport" element={<Transport />} />
               <Route path="restauration" element={<Restauration />} />
-              <Route path="mediation-intermediation" element={<MediationIntermediation />} />
-              <Route path="import-export" element={<ImportExport />} />
-              <Route path="negoce" element={<Negoce />} />
+              <Route path="ticket" element={<Ticket />} />
             </Route>
             <Route path="/contact" element={<Contact />} />
             {/* Redirection par défaut vers la page d'accueil */}
@@ -178,20 +172,18 @@ function App() {
               <div className="footer-section">
                 <h3>À propos de X10</h3>
                 <p>
-                  X10 est votre partenaire de confiance pour tous vos besoins professionnels.
-                  Nous nous engageons à fournir des services de qualité et des solutions innovantes.
+                  X10 est votre partenaire de confiance pour tous vos besoins.
+                  Nous nous engageons à fournir des services de qualité.
                 </p>
               </div>
 
               <div className="footer-section">
                 <h3>Nos Services</h3>
                 <ul className="footer-links">
-                  <li><Link to="/services/communication">Communication</Link></li>
-                  <li><Link to="/services/evenementiel">Événementiel</Link></li>
+                  <li><Link to="/services/hebergement">Hébergement</Link></li>
+                  <li><Link to="/services/transport">Transport</Link></li>
                   <li><Link to="/services/restauration">Restauration</Link></li>
-                  <li><Link to="/services/mediation-intermediation">Médiation</Link></li>
-                  <li><Link to="/services/import-export">Import Export</Link></li>
-                  <li><Link to="/services/negoce">Négoce</Link></li>
+                  <li><Link to="/services/ticket">Ticket</Link></li>
                 </ul>
               </div>
 
