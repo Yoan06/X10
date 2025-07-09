@@ -77,8 +77,8 @@ p {
 
 /* Styles pour la barre d'annonce */
 .announcement-bar {
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-  color: #fff;
+  background: #F5DEB3; /* Couleur beige */
+  color: #333; /* Couleur de texte plus foncée pour la lisibilité */
   padding: 0.5rem 0;
   font-size: 1rem;
   text-align: center;
@@ -120,7 +120,7 @@ p {
 
 .announcement-text {
   flex-grow: 1;
-  color: white;
+  color: #000;
   display: inline-block;
   white-space: nowrap;
   animation: scrollText 20s linear infinite;
@@ -808,18 +808,17 @@ p {
 
 @media (max-width: 992px) {
   .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur les écrans de taille moyenne */
   }
 }
 
 @media (max-width: 768px) {
-  .footer {
-    padding: 3rem 0 1.5rem;
+  .footer-grid {
+    grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .footer {
+    padding: 3rem 0 1.5rem;
   }
 
   .footer-logo-img {
@@ -1061,6 +1060,15 @@ button:active::after, .btn:active::after {
   }
 }
 
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -1261,24 +1269,12 @@ button:active::after, .btn:active::after {
     font-size: 1.8rem;
   }
 
-  .service-card {
-    margin: 0 0.5rem;
-  }
-
-  .service-image {
-    height: 200px;
-  }
-
-  .service-title {
-    font-size: 1.3rem;
-  }
-
   .contact-hero h1 {
     font-size: 1.8rem;
   }
 
   .contact-hero p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0 1rem;
   }
 
@@ -1342,17 +1338,22 @@ button:active::after, .btn:active::after {
   }
 
   .contact-hero p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
-  .form-input {
-    padding: 0.7rem;
+  .form-input,
+  .form-textarea,
+  .submit-button,
+  .btn,
+  button {
     font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
   }
 
-  .submit-button {
-    font-size: 0.9rem;
-    padding: 0.8rem;
+  .footer-section p,
+  .footer-links a,
+  .footer-contact li {
+    font-size: 0.85rem;
   }
 }
 
@@ -1542,20 +1543,20 @@ img {
 /* Optimisation du texte responsive */
 @media (max-width: 576px) {
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   h2 {
-    font-size: 1.75rem;
-  }
-
-  h3 {
     font-size: 1.5rem;
   }
 
+  h3 {
+    font-size: 1.3rem;
+  }
+
   p {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 }
 
@@ -1629,5 +1630,77 @@ img {
   height: 100%;
   object-fit: cover;
   border-radius: 0;
+}
+
+@media (max-width: 768px) {
+  .transport-page .transport-image-container,
+  .ticket-page .ticket-image-container,
+  .hebergement-page .hebergement-image-container {
+    height: 300px; /* Hauteur fixe pour les images sur mobile */
+    margin-bottom: 1.5rem; /* Espace en dessous quand empilé */
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+  .services-title {
+    font-size: 1.6rem;
+  }
+  .contact-hero h1 {
+    font-size: 1.8rem;
+  }
+  .contact-hero p {
+    font-size: 0.85rem;
+  }
+  .form-input,
+  .form-textarea,
+  .submit-button,
+  .btn,
+  button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+  }
+  .footer-section p,
+  .footer-links a,
+  .footer-contact li {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ticket-page .row,
+  .transport-page .row,
+  .hebergement-page .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .ticket-page .col-lg-10.mx-auto,
+  .transport-page .col-lg-10.mx-auto,
+  .hebergement-page .col-lg-10.mx-auto {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .ticket-page .col-md-6,
+  .transport-page .col-md-6,
+  .hebergement-page .col-md-6 {
+    width: 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .ticket-page .ticket-image-container,
+  .transport-page .transport-image-container,
+  .hebergement-page .hebergement-image-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 

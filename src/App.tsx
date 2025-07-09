@@ -97,8 +97,7 @@ function App() {
         <div className="announcement-bar">
           <div className="container">
             <p className="announcement-text">
-              <i className="fas fa-bullhorn"></i> Bénéficiez d'une réduction de 10% sur tous nos services
-              jusqu'à la fin du mois ! <i className="fas fa-tags"></i>
+              <i className="fas fa-bullhorn"></i> X10, votre partenaire unique pour bouger, savourer et vibrer au rythme des plus grands événements. <i className="fas fa-tags"></i>
             </p>
             <button className="close-announcement" onClick={handleCloseAnnouncement}>
               ×
