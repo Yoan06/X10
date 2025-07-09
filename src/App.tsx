@@ -105,11 +105,13 @@ function App() {
           </div>
         </div>
       )}
-        
+
       {/* Sidebar */}
       <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
-          <img src={logo} alt="Logo X10" />
+          <Link to="/">
+            <img src={logo} alt="Logo X10" />
+          </Link>
           <button className="close-sidebar" onClick={toggleSidebar}>×</button>
         </div>
         <button className="sidebar-toggle-arrow" onClick={toggleSidebar}>
@@ -121,12 +123,12 @@ function App() {
           <li><Link to="/services/restauration" onClick={toggleSidebar} className="dropdown-item">Restauration</Link></li>
           <li><Link to="/services/ticket" onClick={toggleSidebar} className="dropdown-item">Ticket</Link></li>
         </ul>
-      <div className="sidebar-footer"></div>
+        <div className="sidebar-footer"></div>
       </div>
 
       {/* Overlay */}
       {sidebarOpen && <div className="sidebar-overlay" onClick={toggleSidebar}></div>}
-
+        
       {/* Navigation */}
       <nav className={`navbar navbar-expand-lg navbar-dark fixed-top ${scrolled ? 'scrolled' : ''} ${location.pathname === '/' ? 'with-announcement' : 'without-announcement'}`}>
         <div className="container">
