@@ -51,7 +51,7 @@ const Home: React.FC = () => {
     const interval = setInterval(() => {
       currentIndex = (currentIndex + 1) % images.length;
       setCurrentBg(images[currentIndex]);
-    }, 10000); // Change toutes les 10 secondes
+    }, 5000); // Change toutes les 5 secondes
 
     return () => clearInterval(interval);
   }, []);
